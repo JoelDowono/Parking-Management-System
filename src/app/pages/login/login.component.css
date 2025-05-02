@@ -1,0 +1,147 @@
+/* Styles pour l'hôte du composant (pour l'image de fond) */
+:host {
+  display: flex; /* Utilise Flexbox pour l'alignement */
+  align-items: center; /* Centre verticalement le contenu (le login-container) */
+  justify-content: center; /* Centre horizontalement le contenu */
+  min-height: 100vh; /* Prend au moins toute la hauteur de la vue */
+  background-image: url('../../../assets/images/login.jpg'); /* Chemin corrigé pour les assets Angular */
+  background-size: cover; /* Couvre toute la zone */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat; /* Ne répète pas l'image */
+}
+
+/* Styles pour le conteneur principal du formulaire de login */
+.login-container {
+  max-width: 400px; /* Largeur maximale du conteneur */
+  /* margin: 50px auto; <- Supprimé, le centrage est géré par flexbox sur :host */
+  padding: 0 20px 20px 20px; /* Supprime le padding supérieur, garde les autres (horizontal, inférieur) */
+  border: 1px solid #ccc; /* Bordure légère */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
+  background-color: #fff; /* Fond blanc */
+}
+
+/* Styles pour l'en-tête ajouté dans le formulaire */
+.form-header {
+  text-align: center;
+  margin: 0 -20px 20px -20px; /* Ajuste marges horizontales pour toucher les bords, supprime marge supérieure négative */
+  padding: 15px 20px; /* Espacement intérieur */
+  border-bottom: 1px solid #0056b3; /* Ligne de séparation un peu plus foncée */
+  background-color: #007bff; /* Couleur de fond bleue (comme le bouton) */
+  color: #fff; /* Couleur du texte en blanc */
+  border-top-left-radius: 8px; /* Arrondit le coin supérieur gauche */
+  border-top-right-radius: 8px; /* Arrondit le coin supérieur droit */
+}
+
+.form-header h1 {
+  margin: 0 0 5px 0; /* Ajuste les marges du titre principal */
+  font-size: 1.8em; /* Taille du titre principal */ /* Ajustez si nécessaire */
+  color: #fff; /* Assure que le H1 est aussi blanc */
+  display: inline-flex; /* Permet d'aligner l'icône et le texte */
+  align-items: center; /* Centre verticalement l'icône et le texte */
+}
+
+/* Styles pour l'icône "P" */
+.header-icon {
+  display: inline-block; /* Permet de définir largeur/hauteur/padding */
+  width: 28px; /* Largeur pour le carré */
+  height: 28px; /* Hauteur pour le carré */
+  line-height: 28px; /* Centre le texte verticalement */
+  text-align: center; /* Centre le texte horizontalement */
+  margin-right: 8px; /* Espace entre l'icône et "ParkSmart" */
+  font-weight: normal; /* Police normale */
+  background-color: #fff; /* Fond blanc */
+  color: #007bff; /* Couleur du texte (bleu comme le fond de l'en-tête pour le contraste) */
+  border-radius: 4px; /* Bordures arrondies */
+}
+
+/* Styles pour le titre */
+.login-container h2 {
+  text-align: center; /* Centre le texte */
+  margin-bottom: 20px; /* Marge en bas du titre */
+  color: #333; /* Couleur du texte */
+}
+
+/* Styles pour chaque groupe de formulaire (label + input/select) */
+.form-group {
+  margin-bottom: 15px; /* Espacement entre les groupes de formulaire */
+}
+
+/* Styles pour les labels */
+.form-group label {
+  display: block; /* Affiche le label sur sa propre ligne */
+  margin-bottom: 5px; /* Espacement entre le label et le champ */
+  font-weight: bold; /* Texte en gras */
+  color: #555; /* Couleur du texte */
+}
+
+/* Styles pour les champs input et select */
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group select {
+  width: 100%; /* Prend toute la largeur disponible */
+  padding: 10px; /* Espacement intérieur */
+  border: 1px solid #ccc; /* Bordure */
+  border-radius: 4px; /* Coins légèrement arrondis */
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+  font-size: 1em; /* Taille de police */
+}
+
+/* Styles spécifiques pour la checkbox "Remember me" */
+.remember-me {
+  display: flex; /* Utilise flexbox pour aligner la checkbox et le label */
+  align-items: center; /* Centre verticalement les éléments */
+  margin-bottom: 15px; /* Marge en bas */
+}
+
+.remember-me input[type="checkbox"] {
+  width: auto; /* La checkbox ne prend pas toute la largeur */
+  margin-right: 8px; /* Espacement entre la checkbox et le label */
+}
+
+.remember-me label {
+  margin-bottom: 0; /* Supprime la marge en bas du label dans ce groupe */
+  font-weight: normal; /* Le label n'est pas en gras */
+}
+
+/* Styles pour le bouton de connexion */
+.login-button {
+  display: block; /* Affiche le bouton sur sa propre ligne */
+  width: 100%; /* Prend toute la largeur disponible */
+  padding: 10px 15px; /* Espacement intérieur */
+  background-color: #007bff; /* Couleur de fond bleue */
+  color: white; /* Couleur du texte blanc */
+  border: none; /* Supprime la bordure par défaut */
+  border-radius: 4px; /* Coins légèrement arrondis */
+  cursor: pointer; /* Change le curseur au survol */
+  font-size: 1.1em; /* Taille de police légèrement plus grande */
+  transition: background-color 0.3s ease; /* Animation douce au survol */
+}
+
+/* Style au survol du bouton */
+.login-button:hover {
+  background-color: #0056b3; /* Couleur de fond plus foncée au survol */
+}
+
+/* Styles pour la barre de séparation */
+hr {
+  margin-top: 25px; /* Marge au-dessus de la ligne */
+  margin-bottom: 15px; /* Marge en dessous de la ligne */
+  border: 0; /* Supprime la bordure par défaut */
+  border-top: 1px solid #eee; /* Ajoute une ligne fine et claire */
+}
+
+/* Styles pour le pied de page (copyright) */
+footer {
+  text-align: center; /* Centre le texte */
+  font-size: 0.9em; /* Taille de police légèrement plus petite */
+  color: #777; /* Couleur du texte gris */
+}
+
+/* Styles pour rendre le formulaire un peu plus responsive sur petits écrans */
+@media (max-width: 500px) {
+  .login-container {
+    margin: 20px; /* Réduit la marge sur les petits écrans */
+    padding: 15px; /* Réduit le padding */
+  }
+}

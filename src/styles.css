@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+* { 
+    box-sizing: border-box;
+    margin: 0; /* Supprime la marge par défaut */
+    padding: 0; /* Supprime le padding par défaut */
+}

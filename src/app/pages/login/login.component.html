@@ -1,1 +1,58 @@
-<p>login works!</p>
+<div class="login-container">
+  <div class="form-header">
+    <h1><span class="header-icon">P</span><strong>ParkSmart</strong></h1>
+    <p>Parking Management System</p>
+  </div>
+
+  <h2>Operator Login</h2> <!-- Ou gardez "Login" si vous préférez -->
+
+  <form>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter username" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+    </div>
+
+    <div class="form-group">
+      <label for="role">Login as</label>
+      <select id="role" name="role">
+        <option value="" disabled selected>Select your role</option>
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+        <option value="guest">Guest</option>
+        <!-- Ajoutez d'autres rôles si nécessaire -->
+      </select>
+    </div>
+
+    <div class="form-group remember-me">
+      <input type="checkbox" id="remember" name="remember">
+      <label for="remember">Remember me</label>
+    </div>
+
+    <button type="submit" class="login-button">Login</button>
+  </form>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2025 Parking Management System. All rights reserved.</p>
+  </footer>
+</div>
+
+<!-- Optionnel : Ajoutez un peu de style dans login.component.css -->
+<!--
+.login-container { max-width: 400px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; }
+.form-group input, .form-group select { width: 100%; padding: 8px; box-sizing: border-box; }
+.remember-me { display: flex; align-items: center; }
+.remember-me input { width: auto; margin-right: 5px; }
+.login-button { padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 3px; cursor: pointer; width: 100%; }
+.login-button:hover { background-color: #0056b3; }
+hr { margin-top: 20px; margin-bottom: 10px; }
+footer p { text-align: center; font-size: 0.9em; color: #666; }
+-->
